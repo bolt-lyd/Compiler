@@ -1,7 +1,7 @@
 #include <string>
 using namespace std;
 
-enum tokenType {PLUS, MINUS, IF_RW, LOOP_RW, END_RW, L_PAREN, R_PAREN,
+enum tokenType {ENDOF, PLUS, MINUS, IF_RW, LOOP_RW, END_RW, L_PAREN, R_PAREN,
                 L_BRACKET, R_BRACKET, NUMBER, IDENTIFIER};
 
 class tokenmark{
@@ -13,10 +13,19 @@ class tokenmark{
 class token{
     private:
         tokenType tt;
+
+        // ASCII string rep of token
+        string *tokStr;
+
     public:
         void setTokenType(tokenType);
-        string *tokStr;
-        tokenmark *tm = nullptr; //"complex data type that records secondary info about token"
+        tokenType getTokenType();
+        
+        void setTokenString(string);
+        string getTokenString();
+
+        //"complex data type that records secondary info about token"
+        tokenmark *tm = nullptr; 
 };  
 
 
