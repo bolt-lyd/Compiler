@@ -18,4 +18,6 @@ main(){
     cout << "Start scanning"
     tok = scan();
     
+    File.closeFile();
+    return 0;
 }

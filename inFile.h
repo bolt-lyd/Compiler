@@ -18,4 +18,5 @@ class inFile{
         void ungetChar(char); // push character back to the input file string
         void incLineCnt();
         int getLineCnt();
+        void closeFile();
 };

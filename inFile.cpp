@@ -3,7 +3,7 @@
 bool inFile::attachFile(string s){
     std::ifstream input(s);
     if (!input){
-        std::cerr << "Error opening file";
+        std::cerr << "Error opening file \n";
         return false;
     }
     return true;
@@ -25,4 +25,8 @@ void inFile::incLineCnt(){
 
 int inFile::getLineCnt(){
     return lineCnt;
+}
+
+void inFile::closeFile(){
+    input.close();
 }
