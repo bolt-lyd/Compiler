@@ -11,7 +11,7 @@ typedef struct hashItem
 };
 
 // Define Table itself
-                //should the items in table be tokens?
+                /////////////should the items in table be tokens?///////////////
 typedef struct hashTable
 {
     // Contains array of pointers to items
