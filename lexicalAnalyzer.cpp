@@ -1,6 +1,16 @@
 #include "lexicalAnalyzer.h"
 
-//#include "inFile.h"
+unordered_map<string, tokenType> hashTable = {
+    {"if", tokenType::IF_RW},
+    {"else", tokenType::IF_RW},
+    {"while", tokenType::LOOP_RW},
+    {"for", tokenType::LOOP_RW},
+    {"+", tokenType::PLUS},
+    {"-", tokenType::MINUS},
+    {"end", tokenType::END_RW},
+    {"(", tokenType::L_PAREN},
+    {")", tokenType::R_PAREN},
+};
 
 Token lexicalAnalyzer::tokenIdentifierOrKeyword(){
     string identifier;

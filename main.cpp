@@ -15,35 +15,8 @@ int main() {
     Token token;
     do {
         token = lexer.getNextToken();
-        // cout << "Token type: ";
-        // switch (token.type) {
-        //     case tokenType::IDENTIFIER:
-        //         cout << "Identifier";
-        //         break;
-        //     case tokenType::NUMBER:
-        //         cout << "Number";
-        //         break;
-        //     case tokenType::OPERATOR:
-        //         cout << "Operator";
-        //         break;
-        //     case tokenType::KEYWORD:
-        //         cout << "Keyword";
-        //         break;
-        //     case tokenType::PUNCTUATION:
-        //         cout << "Punctuation";
-        //         break;
-        //     case tokenType::ERROR:
-        //         cout << "Error";
-        //         break;
-        // }
-        // cout << ", Value: " << token.value << endl;
-    } while (token.type != tokenType::ERROR && token.type != tokenType::ERROR);
-
-    // Print out the updated keyword table
-    cout << "\nUpdated Keyword Table:" << endl;
-    for (const auto& entry : hashTable) {
-        cout << entry.first << ": ";
-        switch (entry.second) {
+        cout << "Token type: ";
+        switch (token.type) {
             case tokenType::PLUS:
                 cout << "PLUS";
                 break;
@@ -88,9 +61,9 @@ int main() {
                 cout << "Identifier";
                 break;
         }
-        cout << endl;
-    }
-
+        cout << ", Value: " << token.value << endl;
+    } while (token.type != tokenType::ERROR && token.type != tokenType::ERROR);
+    
     return 0;
 }
 
