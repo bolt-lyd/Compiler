@@ -71,6 +71,25 @@ class lexicalAnalyzer{
             }
         }
 
+        void skipSingleLineComment() {
+            position += 2;
+            while (position < input.length() && input[position] != '\n') {
+                position++;
+            }
+            lineCnt++;
+        }
+
+        void skipMultiLineComment() {
+            position += 2; // Skip the '/*'
+            while (position + 1 < input.length() && !(input[position] == '*' && input[position + 1] == '/')) {
+                position++; // Skip until '*/' is found
+                if(input[position] == '\n'){
+                        lineCnt++;
+                    }
+            }
+            position += 2; // Skip the '*/'
+        }
+
 
     public:
         lexicalAnalyzer(const string& input) : input(input), position(0) {}
@@ -85,6 +104,15 @@ class lexicalAnalyzer{
                         lineCnt++;
                     }
                     continue;
+                }else if (currentChar == '/') {
+                    // Check for comments
+                    if (position + 1 < input.length() && input[position + 1] == '/') {
+                        skipSingleLineComment();
+                        continue;
+                    } else if (position + 1 < input.length() && input[position + 1] == '*') {
+                        skipMultiLineComment();
+                        continue;
+                    }
                 }
 
                 if (isalpha(currentChar)) {

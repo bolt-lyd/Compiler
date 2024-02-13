@@ -14,6 +14,8 @@ class lexicalAnalyzer{
         Token tokenNumber();
         Token tokenOpOrPunc();
         Token createErrorToken(const string& message);
+        void skipSingleLineComment();
+        void skipMultiLineComment();
 
     public:
         lexicalAnalyzer(const string& input) : input(input), position(0) {}
