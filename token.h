@@ -3,6 +3,7 @@
 using namespace std;
 
 #ifndef token_H
+#define token_H
 
 enum tokenType {PLUS, MINUS, IF_RW, LOOP_RW, END_RW, L_PAREN, R_PAREN,
                 L_BRACKET, R_BRACKET, NUMBER, IDENTIFIER, ERROR, eof,
@@ -12,7 +13,6 @@ struct Token {
     tokenType type;
     string value;
 };
-
 
 
 #endif

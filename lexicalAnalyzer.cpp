@@ -12,6 +12,9 @@ unordered_map<string, tokenType> hashTable = {
     {")", tokenType::R_PAREN},
 };
 
+
+
+
 Token lexicalAnalyzer::tokenIdentifierOrKeyword(){
     string identifier;
     while (position < input.length() && (isalnum(input[position]) || input[position] == '_')) {
