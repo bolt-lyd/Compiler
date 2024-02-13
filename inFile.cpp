@@ -27,6 +27,6 @@ int inFile::getLineCnt(){
     return lineCnt;
 }
 
-void inFile::closeFile(){
-    input.close();
-}
+// void inFile::closeFile(){
+//     input.close();
+// }

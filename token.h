@@ -1,32 +1,38 @@
 #include <string>
 using namespace std;
 
-enum tokenType {ENDOF, PLUS, MINUS, IF_RW, LOOP_RW, END_RW, L_PAREN, R_PAREN,
-                L_BRACKET, R_BRACKET, NUMBER, IDENTIFIER};
+enum tokenType {PLUS, MINUS, IF_RW, LOOP_RW, END_RW, L_PAREN, R_PAREN,
+                L_BRACKET, R_BRACKET, NUMBER, IDENTIFIER, ERROR, eof,
+                SEMICOLON, ASSIGN, DIVIDE, MULT };
 
-class tokenmark{
-    mark tmUnionType; // some union type that will evolve as the solution progresses.
-    // many possibilities here, this could instead be a base type
-    // for a bunch of derived instances.
-};
+struct Token {
+    tokenType type;
+    string value;
+}
 
-class token{
-    private:
-        tokenType tt;
+// class tokenmark{
+//     mark tmUnionType; // some union type that will evolve as the solution progresses.
+//     // many possibilities here, this could instead be a base type
+//     // for a bunch of derived instances.
+// };
 
-        // ASCII string rep of token
-        string *tokStr;
+// class token{
+//     private:
+//         tokenType tt;
 
-    public:
-        void setTokenType(tokenType);
-        tokenType getTokenType();
+//         // ASCII string rep of token
+//         string *tokStr;
+
+//     public:
+//         void setTokenType(tokenType);
+//         tokenType getTokenType();
         
-        void setTokenString(string);
-        string getTokenString();
+//         void setTokenString(string);
+//         string getTokenString();
 
-        //"complex data type that records secondary info about token"
-        tokenmark *tm = nullptr; 
-};  
+//         //"complex data type that records secondary info about token"
+//         tokenmark *tm = nullptr; 
+// };  
 
 
 

@@ -1,32 +1,26 @@
 #include <string>
 #include "token.h"
+#include <unordered_map>
+
 using namespace std;
 
-// Define HashTable items
-typedef struct hashItem
-{
-    /* data */
-    char* key;
-    char* value;
+unordered_map<string, tokenType> hashTable = {
+    {"if", tokenType::IF_RW},
+    {"else", tokenType::IF_RW},
+    {"while", tokenType::LOOP_RW},
+    {"for", tokenType::LOOP_RW},
+    {"+", tokenType::PLUS},
+    {"-", tokenType::MINUS},
+    {"end", tokenType::END_RW},
+    {"(", tokenType::L_PAREN},
+    {")", tokenType::R_PAREN},
 };
 
-// Define Table itself
-                /////////////should the items in table be tokens?///////////////
-typedef struct hashTable
-{
-    // Contains array of pointers to items
-    hashItem** items;
-    int size;
-    int count;
-};
-
-
-
-class symbolTable{
-    private:
-        //hashTable <token> symTab;
-        hashTable symTab;
-    public:
-        token hashLook(string); // lookup the string in the hash table and call create function if not found
-        void setToken(string); // change the token values for this symbol
-};
+// class symbolTable{
+//     private:
+//         //hashTable <token> symTab;
+//         hashTable symTab;
+//     public:
+//         token hashLook(string); // lookup the string in the hash table and call create function if not found
+//         void setToken(string); // change the token values for this symbol
+// };
