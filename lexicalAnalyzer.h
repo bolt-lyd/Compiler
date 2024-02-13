@@ -1,6 +1,6 @@
 #include <string>
 #include <iostream>
-#include "symbolTable.h"
+#include "token.h"
 
 using namespace std;
 
