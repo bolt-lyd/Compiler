@@ -4,6 +4,9 @@
 
 using namespace std;
 
+#ifndef lexicalAnalyzer_H
+#define lexicalAnalyzer_H
+
 class lexicalAnalyzer{
     private:
         const string input;
@@ -22,3 +25,5 @@ class lexicalAnalyzer{
 
         Token getNextToken();
 };
+
+#endif

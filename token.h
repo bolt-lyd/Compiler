@@ -2,6 +2,8 @@
 #include <unordered_map>
 using namespace std;
 
+#ifndef token_H
+
 enum tokenType {PLUS, MINUS, IF_RW, LOOP_RW, END_RW, L_PAREN, R_PAREN,
                 L_BRACKET, R_BRACKET, NUMBER, IDENTIFIER, ERROR, eof,
                 SEMICOLON, ASSIGN, DIVIDE, MULT };
@@ -22,6 +24,8 @@ unordered_map<string, tokenType> hashTable = {
     {"(", tokenType::L_PAREN},
     {")", tokenType::R_PAREN},
 };
+
+#endif
 
 // class tokenmark{
 //     mark tmUnionType; // some union type that will evolve as the solution progresses.
