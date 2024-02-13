@@ -1,5 +1,5 @@
 #include "lexicalAnalyzer.h"
-#include "symbolTable.h"
+
 //#include "inFile.h"
 
 Token lexicalAnalyzer::tokenIdentifierOrKeyword(){

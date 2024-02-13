@@ -8,7 +8,7 @@ enum tokenType {PLUS, MINUS, IF_RW, LOOP_RW, END_RW, L_PAREN, R_PAREN,
 struct Token {
     tokenType type;
     string value;
-}
+};
 
 // class tokenmark{
 //     mark tmUnionType; // some union type that will evolve as the solution progresses.
