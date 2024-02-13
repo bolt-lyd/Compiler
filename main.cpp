@@ -4,8 +4,6 @@
 #include <string>
 
 #include "lexicalAnalyzer.h"
-//#include "symbolTable.h"
-
 using namespace std;
 
 
