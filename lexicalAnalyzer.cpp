@@ -2,6 +2,9 @@
 
 //#include "inFile.h"
 
+
+
+
 Token lexicalAnalyzer::tokenIdentifierOrKeyword(){
     string identifier;
     while (position < input.length() && (isalnum(input[position]) || input[position] == '_')) {
