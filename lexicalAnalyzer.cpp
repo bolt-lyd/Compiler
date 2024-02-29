@@ -5,11 +5,14 @@ unordered_map<string, tokenType> hashTable = {
     {"else", tokenType::IF_RW},
     {"while", tokenType::LOOP_RW},
     {"for", tokenType::LOOP_RW},
-    {"+", tokenType::PLUS},
-    {"-", tokenType::MINUS},
+    {"+", tokenType::OPERATION},
+    {"-", tokenType::OPERATION},
     {"end", tokenType::END_RW},
     {"(", tokenType::L_PAREN},
     {")", tokenType::R_PAREN},
+    {"/", tokenType::OPERATION},
+    {"*", tokenType::OPERATION},
+    {"==", tokenType::OPERATION},
 };
 
 

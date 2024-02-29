@@ -5,9 +5,9 @@ using namespace std;
 #ifndef token_H
 #define token_H
 
-enum tokenType {PLUS, MINUS, IF_RW, LOOP_RW, END_RW, L_PAREN, R_PAREN,
+enum tokenType {IF_RW, LOOP_RW, END_RW, L_PAREN, R_PAREN,
                 L_BRACKET, R_BRACKET, NUMBER, IDENTIFIER, ERROR, eof,
-                SEMICOLON, ASSIGN, DIVIDE, MULT };
+                SEMICOLON, ASSIGN, OPERATION };
 
 struct Token {
     tokenType type;
